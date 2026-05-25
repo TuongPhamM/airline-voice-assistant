@@ -1,0 +1,72 @@
+[
+  {
+    "iataCode": "LAX",
+    "airportName": "Los Angeles International Airport",
+    "city": "Los Angeles",
+    "state": "CA",
+    "country": "USA"
+  },
+  {
+    "iataCode": "JFK",
+    "airportName": "John F. Kennedy International Airport",
+    "city": "New York",
+    "state": "NY",
+    "country": "USA"
+  },
+  {
+    "iataCode": "ORD",
+    "airportName": "O'Hare International Airport",
+    "city": "Chicago",
+    "state": "IL",
+    "country": "USA"
+  },
+  {
+    "iataCode": "SFO",
+    "airportName": "San Francisco International Airport",
+    "city": "San Francisco",
+    "state": "CA",
+    "country": "USA"
+  },
+  {
+    "iataCode": "ATL",
+    "airportName": "Hartsfield-Jackson Atlanta International Airport",
+    "city": "Atlanta",
+    "state": "GA",
+    "country": "USA"
+  },
+  {
+    "iataCode": "MIA",
+    "airportName": "Miami International Airport",
+    "city": "Miami",
+    "state": "FL",
+    "country": "USA"
+  },
+  {
+    "iataCode": "DFW",
+    "airportName": "Dallas/Fort Worth International Airport",
+    "city": "Dallas",
+    "state": "TX",
+    "country": "USA"
+  },
+  {
+    "iataCode": "SEA",
+    "airportName": "Seattle-Tacoma International Airport",
+    "city": "Seattle",
+    "state": "WA",
+    "country": "USA"
+  },
+  {
+    "iataCode": "BOS",
+    "airportName": "Logan International Airport",
+    "city": "Boston",
+    "state": "MA",
+    "country": "USA"
+  },
+  {
+    "iataCode": "LAS",
+    "airportName": "Harry Reid International Airport",
+    "city": "Las Vegas",
+    "state": "NV",
+    "country": "USA"
+  }
+]
