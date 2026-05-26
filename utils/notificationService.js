@@ -98,10 +98,14 @@ function formatSMSMessage(booking) {
   return `✈️ Flight Confirmed!
 
 Confirmation: ${booking.confirmationNumber}
+Airline: ${booking.airline || "N/A"}
 Flight: ${booking.flightNumber || "N/A"}
 Passenger: ${booking.passengerName}
-Route: ${booking.flightDetails.departure} → ${booking.flightDetails.destination}
+
+${booking.flightDetails.departure} → ${booking.flightDetails.destination}
 Date: ${booking.flightDetails.date}
+Departure: ${booking.departureTime || "Check itinerary"}
+Arrival: ${booking.arrivalTime || "Check itinerary"}
 
 Thank you for booking with us!`;
 }
@@ -120,8 +124,10 @@ function formatEmailMessage(booking) {
     .header { background-color: #0066cc; color: white; padding: 20px; text-align: center; }
     .content { background-color: #f9f9f9; padding: 20px; }
     .booking-details { background-color: white; padding: 15px; margin: 20px 0; border-left: 4px solid #0066cc; }
+    .flight-info { display: flex; justify-content: space-between; margin: 10px 0; }
     .footer { text-align: center; padding: 20px; font-size: 12px; color: #666; }
     .highlight { font-size: 24px; font-weight: bold; color: #0066cc; }
+    .route { font-size: 18px; font-weight: bold; margin: 15px 0; }
   </style>
 </head>
 <body>
@@ -137,10 +143,17 @@ function formatEmailMessage(booking) {
       <div class="booking-details">
         <h2>Booking Details</h2>
         <p><strong>Confirmation Number:</strong> <span class="highlight">${booking.confirmationNumber}</span></p>
+        
+        <div class="route">
+          ${booking.flightDetails.departure} → ${booking.flightDetails.destination}
+        </div>
+        
+        <p><strong>Airline:</strong> ${booking.airline || "N/A"}</p>
         <p><strong>Flight Number:</strong> ${booking.flightNumber || "N/A"}</p>
-        <p><strong>Passenger Name:</strong> ${booking.passengerName}</p>
-        <p><strong>Route:</strong> ${booking.flightDetails.departure} → ${booking.flightDetails.destination}</p>
+        <p><strong>Passenger:</strong> ${booking.passengerName}</p>
         <p><strong>Travel Date:</strong> ${booking.flightDetails.date}</p>
+        <p><strong>Departure Time:</strong> ${booking.departureTime || "Check itinerary"}</p>
+        <p><strong>Arrival Time:</strong> ${booking.arrivalTime || "Check itinerary"}</p>
         <p><strong>Status:</strong> ${booking.status}</p>
         <p><strong>Booked At:</strong> ${new Date(booking.bookedAt).toLocaleString()}</p>
       </div>
